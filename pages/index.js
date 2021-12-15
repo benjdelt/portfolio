@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
-import Nav from '../components/Nav';
+// import Nav from '../components/Nav';
 import styles from '../styles/Home.module.css';
 
 import './i18n';
@@ -14,7 +13,7 @@ export default function Home() {
 
   return (
     <div>
-      <Nav />
+      {/* <Nav /> */}
       <header className={styles.header}>
         <div className={styles.headerImg}>
           <img src="me.jpg" alt="Photo of Benjamin Deltenre"/>
