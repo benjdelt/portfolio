@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "presentation": "Présentation",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "home": {
+    "headerTag": "Développeur Web Full Stack",
+    "aboutHeader": "À Propos",
+    "aboutText": "Je suis développeur web full stack basé à Ath en Belgique. Récemment, j’ai passé 2 ans à Vancouver au Canada à développer de nouvelles fonctionnalités pour TalentMarketplace (anglais), une plateforme de recrutement qui met en relation employeurs et candidats. Je suis bilingue français, anglais. Vous pouvez me joindre via LinkedIn, m’envoyer un email ou utiliser le formulaire de contact en bas de la page.",
+    "experienceHeader": "Expérience",
+    "experienceText": "TalentMarketplace est une plateforme de recrutement qui met en relation employeurs et candidats. Pendant 2 ans, j’ai développé de nouvelles fonctionnalités, amélioré des fonctionnalités existantes et réparé des bugs. À partir de septembre 2020, j’ai aussi servi de mentor à un développeur junior. J’ai autant travaillé sur le front end que le back end, jusqu’à ce qu’un développeur backend rejoigne l’équipe. Ensuite, je me suis concentré sur le frontend React en collaborant avec le développeur backend. Bien que la plupart des fonctionnalités sur lesquelles j’ai travaillé ne sont accessibles qu’aux utilisateurs enregistrés, j’ai eu l’opportunité de développer les pages d’accueil pour les employeurs (links) avec HTML, CSS et JavaScript (jQuery), en me basant sur les prototypes réalisés par un designer."
+  } 
+}
