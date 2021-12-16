@@ -4,7 +4,10 @@ import styles from '../styles/Nav.module.css';
 
 function Nav() {
 
+  const languageLabels = {fr: "Français", en: "English"};
+
   const { t, i18n } = useTranslation();
+  const switchValue = i18n.language === "en" ? "fr" : "en";
 
   return (
     <nav  className={styles.navBar}>
@@ -12,8 +15,11 @@ function Nav() {
         <li><Link href="/">{ t('nav.presentation') }</Link></li>
         <li><Link href="/services">{ t('nav.services') }</Link></li>
         <li><Link href="/contact">{ t('nav.contact') }</Link></li>
-        <li><button onClick={() => i18n.changeLanguage("en")}>En</button></li>
-        <li><button onClick={() => i18n.changeLanguage("fr")}>Fr</button></li>
+        <li>
+          <button className={styles.language} onClick={() => i18n.changeLanguage(switchValue)}>
+            {languageLabels[switchValue]}
+          </button>
+        </li>
       </ul>
     </nav>  
   )

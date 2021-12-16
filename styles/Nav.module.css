@@ -1,7 +1,6 @@
 .navBar {
   position: fixed;
   width: 100%;
-  height: 4em;
   /* background-color: #  f5f5f5; */
 }
 
@@ -16,15 +15,22 @@
   list-style-type: none;
 }
 
-.navBar a {
-  padding: 1em;
+.navBar a, .navBar button {
+  padding: 0 1em 1em 1em;
   font-size: 1.1rem;
   text-decoration: none;
   color: inherit;
   letter-spacing: 2px;
+  text-align: left;
+  display: inline-block;
 }
 
-.navBar a:hover {
+.navBar a:hover, .navBar button:hover {
   color: #5f5f5f;
   border-bottom: 2px solid #5f5f5f;
+}
+
+.language {
+  border: none;
+  background: none;
 }
