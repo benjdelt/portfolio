@@ -36,29 +36,31 @@
 .section   {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.section * {
-  width: 50vw;
+.sectionContent {
+  width: 65vw;
 }
 
-.sectionText {
+.about {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 2em;
+  margin: 2em 0;
 }
 
-.sectionText h2 {
+.about h2 {
   margin: .5em 0;
+  align-self: flex-start;
 }
 
-.section img {
+/* .section img {
   max-width: 35em;
   margin: 2.5em;
   -webkit-box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.34); 
   box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.34);
-}
+} */

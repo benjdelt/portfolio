@@ -24,6 +24,15 @@ h3, h4 {
   font-size: 1.3rem;
 }
 
+a:hover, a:focus, button:hover, button:focus {
+  outline: none;
+}
+
+button {
+  font-family: Roboto, Ubuntu, sans-serif;
+  cursor: pointer;
+}
+
 p {
   font-size: 1.1rem;
   line-height: 2em;
