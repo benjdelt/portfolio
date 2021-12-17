@@ -24,7 +24,12 @@ h3, h4 {
   font-size: 1.3rem;
 }
 
+a {
+  color: #1f1f1f;
+}
+
 a:hover, a:focus, button:hover, button:focus {
+  color: #5f5f5f;
   outline: none;
 }
 
@@ -33,7 +38,11 @@ button {
   cursor: pointer;
 }
 
-p {
+li {
+  list-style-type: none;
+}
+
+p, a, button {
   font-size: 1.1rem;
   line-height: 2em;
   letter-spacing: 1px;

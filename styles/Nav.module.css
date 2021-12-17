@@ -11,10 +11,6 @@
   justify-content: flex-end;
 }
 
-.navBar li {
-  list-style-type: none;
-}
-
 .navBar a, .navBar button {
   padding: 0 1em 1em 1em;
   font-size: 1.1rem;
@@ -26,7 +22,6 @@
 }
 
 .navBar a:hover, .navBar button:hover {
-  color: #5f5f5f;
   border-bottom: 2px solid #5f5f5f;
 }
 

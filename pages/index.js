@@ -13,7 +13,6 @@ export default function Home() {
 
   return (
     <div>
-      {/* <Nav /> */}
       <header className={styles.header}>
         <div className={styles.headerImg}>
           <img src="me.jpg" alt="Photo of Benjamin Deltenre"/>
