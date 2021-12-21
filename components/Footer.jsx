@@ -12,7 +12,7 @@ function Footer() {
 
   return (
     <footer className={styles.footer}>
-        <ul>
+        <ul className={styles.nav}>
           <li>
             <Link href="/">
               { t('nav.presentation') }

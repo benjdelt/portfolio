@@ -74,4 +74,9 @@
   .headerText {
     text-align: center;
   }
+
+  .section {
+    height: fit-content;
+    padding: 2em 0;
+  }
 }

@@ -4,6 +4,10 @@
                         "text text img";
 }
 
+.article > * {
+  margin: 1em 0;
+}
+
 .title {
   grid-area: header;
 }
@@ -22,4 +26,22 @@
   margin: 0 1em;
   -webkit-box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.34); 
   box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.34);
+}
+
+@media (max-width: 1200px) {
+  .article {
+    grid-template-areas:  "header header header"
+                          "img img img"
+                          "text text text";
+  }
+
+  .article img {
+    margin: 0;
+  }
+}
+
+@media (max-width: 667px) {
+  .article img {
+    max-width: 65vw;
+  }
 }

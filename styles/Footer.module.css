@@ -42,3 +42,20 @@
   font-size:.35rem;
   align-self: center;
 }
+
+@media (max-width: 775px) {
+  .footer{
+    grid-template-columns: 1fr;
+  }
+
+  .footer .nav, .footer .social {
+    justify-self: center;
+  }
+
+}
+
+@media (max-width: 375px) {
+  .footer > * {
+    flex-wrap: wrap;
+  }
+}
