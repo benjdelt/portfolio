@@ -1,6 +1,7 @@
 .header {
   background-color: #dfe4ea;
   display: flex;
+  justify-content: space-evenly;
   margin-left: 15vw;
   padding-top: 4em;
   height: 100vh;
@@ -16,13 +17,14 @@
   max-width: 15em;
   height: 15em;
   border-radius: 100% ;
-  margin: 10em; 
+  margin: 1em; 
 }
 
 .headerText {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 1em;
 }
 
 .headerText h3 {
@@ -58,9 +60,18 @@
   align-self: flex-start;
 }
 
-/* .section img {
-  max-width: 35em;
-  margin: 2.5em;
-  -webkit-box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.34); 
-  box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.34);
-} */
+@media (max-width: 594px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .headerImg {
+    align-self: center;
+    height: initial;
+  }
+
+  .headerText {
+    text-align: center;
+  }
+}

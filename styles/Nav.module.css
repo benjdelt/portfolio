@@ -1,7 +1,7 @@
 .navBar {
   position: fixed;
   width: 100%;
-  /* background-color: #  f5f5f5; */
+  /* background-color: #f5f5f5; */
 }
 
 .navBar .buttonContainer {
@@ -66,5 +66,9 @@
     text-align: center;
     border: none;
     background-color: transparent;
+  }
+
+  .navBar a, .navBar ul button {
+    padding: 1em;
   }
 }
