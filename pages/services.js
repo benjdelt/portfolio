@@ -1,7 +1,11 @@
+import Section from '../components/Section';
 
 function Services() {
   return (
-    <h1>Services</h1>
+    <Section background={true} >
+      <h1>Services</h1>
+      <p>Coming soon...</p>
+    </Section>
   )
 }
 

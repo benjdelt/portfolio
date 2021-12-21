@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { useTranslation } from 'react-i18next';
+import Section from '../components/Section';
 import Article from '../components/Article';
 import styles from '../styles/Home.module.css';
 
@@ -22,27 +23,20 @@ export default function Home() {
           <h3>{ t('home.headerTag') }</h3>
         </div>
       </header>
-      <section className={`${styles.section} ${styles.odd}`}>
-        <div className={styles.sectionContent}>
-          <h2>{ t('home.aboutHeader') }</h2>
-          <div className={styles.about}>
-            <p>{ t('home.aboutText') }</p>
-          </div>
+      <Section>
+        <h2>{ t('home.aboutHeader') }</h2>
+        <div className={styles.about}>
+          <p>{ t('home.aboutText') }</p>
         </div>
-      </section>
-      <section className={`${styles.section} ${styles.even}`}>
-        <div className={styles.sectionContent}>
-          <h2>{ t('home.experienceHeader') }</h2>
-          <Article 
-            image="/tmp.png"
-            title="Talent Marketplace"
-            text={ t('home.tmpText') }
-          />
-        </div>
-      </section>
-      <footer className={styles.odd}>
-
-      </footer>
+      </Section>
+      <Section background={true} >
+        <h2>{ t('home.experienceHeader') }</h2>
+        <Article 
+          image="/tmp.png"
+          title="Talent Marketplace"
+          text={ t('home.tmpText') }
+        />
+      </Section>
     </div>
   )
 }

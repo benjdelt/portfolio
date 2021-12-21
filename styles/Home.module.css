@@ -31,22 +31,6 @@
   font-weight: 400;
 }
 
-.even {
-  background-color: #dfe4ea;
-}
-
-.section   {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.sectionContent {
-  width: 65vw;
-}
-
 .about {
   display: flex;
   flex-direction: column;
@@ -73,10 +57,5 @@
 
   .headerText {
     text-align: center;
-  }
-
-  .section {
-    height: fit-content;
-    padding: 2em 0;
   }
 }

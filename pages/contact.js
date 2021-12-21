@@ -1,7 +1,11 @@
+import Section from '../components/Section';
 
 function Contact() {
   return (
-    <h1>Contact</h1>
+    <Section background={true} >
+      <h1>Contact</h1>
+      <p>Coming soon...</p>
+    </Section>
   )
 }
 
