@@ -2,7 +2,7 @@ import Section from '../components/Section';
 
 function Services() {
   return (
-    <Section background={true} >
+    <Section background>
       <h1>Services</h1>
       <p>Coming soon...</p>
     </Section>

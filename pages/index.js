@@ -29,7 +29,7 @@ export default function Home() {
           <p>{ t('home.aboutText') }</p>
         </div>
       </Section>
-      <Section background={true} >
+      <Section background>
         <h2>{ t('home.experienceHeader') }</h2>
         <Article 
           image="/tmp.png"
