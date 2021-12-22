@@ -1,21 +1,12 @@
-import { Suspense } from 'react';
+import { appWithTranslation } from 'next-i18next'
 import Layout from '../components/Layout';
-import Section from '../components/Section';
-import Loader from '../components/Loader';
-import '../styles/globals.css'
 
-function MyApp({ Component, pageProps }) {
-      return (
-        <Suspense fallback={
-          <Section background>
-            <Loader />
-          </Section>
-        }>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </Suspense>
-      )
-}
+import '../styles/globals.css';
 
-export default MyApp
+const MyApp = ({ Component, pageProps }) => (
+  <Layout>
+    <Component {...pageProps} />
+  </Layout>
+)
+
+export default appWithTranslation(MyApp);

@@ -1,45 +1,49 @@
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import styles from '../styles/Footer.module.css';
 
-function Footer() {
+export default function Footer() {
 
-  const { t, i18n } = useTranslation();
+  // Using the router hook to switch locale without changing the current page
+  const router = useRouter();
+  const { pathname, asPath, query } = router;
+  const { t } = useTranslation('nav');
 
   return (
     <footer className={styles.footer}>
         <ul className={styles.nav}>
           <li>
             <Link href="/">
-              { t('nav.presentation') }
+              { t('presentation') }
             </Link>&nbsp;
           </li>
           <FontAwesomeIcon icon={faCircle} className={styles.separator} />&nbsp;
           <li>
             <Link href="/services">
-              { t('nav.services') }
+              { t('services') }
             </Link>&nbsp;
           </li>
           <FontAwesomeIcon icon={faCircle} className={styles.separator} />&nbsp;
           <li>
             <Link href="/contact">
-              { t('nav.contact') }
+              { t('contact') }
             </Link>
           </li>
         </ul>
         <ul className={styles.language}>
           <li>
-            <button onClick={() => i18n.changeLanguage('fr')}>
+            <button onClick={() => router.push({ pathname, query }, asPath, { locale: 'fr' })}>
               Français
             </button>
           </li>
             <FontAwesomeIcon icon={faCircle} className={styles.separator} />&nbsp;
           <li>
-            <button  onClick={() => i18n.changeLanguage('en')}>
+            <button onClick={() => router.push({ pathname, query }, asPath, { locale: 'en' })}>
               English
             </button>
           </li>
@@ -59,5 +63,3 @@ function Footer() {
       </footer>
   );
 }
-
-export default Footer;

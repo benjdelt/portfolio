@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,10 +9,13 @@ import styles from '../styles/Nav.module.css';
 
 function Nav() {
 
+  // Using the router hook to switch locale without changing the current page
+  const router = useRouter();
+  const { pathname, asPath, query, locale } = router;
+  
+  const { t } = useTranslation('nav');
+  const switchValue = locale === "en" ? "fr" : "en";
   const languageLabels = {fr: "Français", en: "English"};
-
-  const { t, i18n } = useTranslation();
-  const switchValue = i18n.language === "en" ? "fr" : "en";
 
   const wrapperRef = useRef(null);
   const [isMobileOpen, setMobileOpen] = useState(false);
@@ -46,11 +50,11 @@ function Nav() {
         </button>
       </div>
       <ul className={`${styles.menu} ${isMobileOpenStyles}`} onClick={() => setMobileOpen(false)} ref={wrapperRef}>
-        <li><Link href="/">{ t('nav.presentation') }</Link></li>
-        <li><Link href="/services">{ t('nav.services') }</Link></li>
-        <li><Link href="/contact">{ t('nav.contact') }</Link></li>
+        <li><Link href="/">{ t('presentation') }</Link></li>
+        <li><Link href="/services">{ t('services') }</Link></li>
+        <li><Link href="/contact">{ t('contact') }</Link></li>
         <li>
-          <button className={styles.language} onClick={() => i18n.changeLanguage(switchValue)}>
+          <button className={styles.language} onClick={() => router.push({ pathname, query }, asPath, { locale: switchValue })}>
             {languageLabels[switchValue]}
           </button>
         </li>

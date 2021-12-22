@@ -1,16 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Section from '../components/Section';
 import Article from '../components/Article';
 import styles from '../styles/Home.module.css';
 
-import './i18n';
-
 
 export default function Home() {
 
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
 
   return (
     <div>
@@ -20,23 +19,36 @@ export default function Home() {
         </div>
         <div className={styles.headerText}>
           <h1>Benjamin Deltenre</h1>
-          <h3>{ t('home.headerTag') }</h3>
+          <h3>{ t('headerTag') }</h3>
         </div>
       </header>
       <Section>
-        <h2>{ t('home.aboutHeader') }</h2>
+        <h2>{ t('aboutHeader') }</h2>
         <div className={styles.about}>
-          <p>{ t('home.aboutText') }</p>
+          <p>{ t('aboutText') }</p>
         </div>
       </Section>
       <Section background>
-        <h2>{ t('home.experienceHeader') }</h2>
+        <h2>{ t('experienceHeader') }</h2>
         <Article 
           image="/tmp.png"
           title="Talent Marketplace"
-          text={ t('home.tmpText') }
+          text={ t('tmpText') }
         />
       </Section>
     </div>
   )
+}
+
+export async function getStaticProps(context) {
+  let localisation = {};
+  if (context.locale) {
+    localisation = await serverSideTranslations(context.locale, ['common', 'nav']);
+  }
+
+  return {
+    props: {
+      ...localisation,
+    },
+  };
 }
