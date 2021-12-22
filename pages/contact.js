@@ -1,11 +1,15 @@
+import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Section from '../components/Section';
 
 export default function Contact() {
+
+  const { t } = useTranslation('contact');
+
   return (
     <Section background>
-      <h1>Contact</h1>
-      <p>Coming soon...</p>
+      <h1>{t('contact')}</h1>
+      <p>{t('soon')}</p>
     </Section>
   )
 }
@@ -13,7 +17,7 @@ export default function Contact() {
 export async function getStaticProps(context) {
   let localisation = {};
   if (context.locale) {
-    localisation = await serverSideTranslations(context.locale, ['nav']);
+    localisation = await serverSideTranslations(context.locale, ['nav', 'contact']);
   }
 
   return {
