@@ -1,18 +1,17 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
+import { useLanguageSwitcher } from '../hooks/useLanguageSwitcher';
 import styles from '../styles/Footer.module.css';
 
 export default function Footer() {
 
-  // Using the router hook to switch locale without changing the current page
-  const router = useRouter();
-  const { pathname, asPath, query } = router;
   const { t } = useTranslation('nav');
+
+  const { switchFr, switchEn } = useLanguageSwitcher();
 
   return (
     <footer className={styles.footer}>
@@ -37,13 +36,13 @@ export default function Footer() {
         </ul>
         <ul className={styles.language}>
           <li>
-            <button onClick={() => router.push({ pathname, query }, asPath, { locale: 'fr' })}>
+            <button onClick={() => switchFr()}>
               Français
             </button>
           </li>
             <FontAwesomeIcon icon={faCircle} className={styles.separator} />&nbsp;
           <li>
-            <button onClick={() => router.push({ pathname, query }, asPath, { locale: 'en' })}>
+            <button onClick={() => switchEn()}>
               English
             </button>
           </li>

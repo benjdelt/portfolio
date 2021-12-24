@@ -1,21 +1,17 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
+import { useLanguageSwitcher } from '../hooks/useLanguageSwitcher';
 import styles from '../styles/Nav.module.css';
 
 function Nav() {
 
-  // Using the router hook to switch locale without changing the current page
-  const router = useRouter();
-  const { pathname, asPath, query, locale } = router;
-  
   const { t } = useTranslation('nav');
-  const switchValue = locale === "en" ? "fr" : "en";
-  const languageLabels = {fr: "Français", en: "English"};
+
+  const { switchLocale, switchLabel } = useLanguageSwitcher();
 
   const wrapperRef = useRef(null);
   const [isMobileOpen, setMobileOpen] = useState(false);
@@ -54,8 +50,8 @@ function Nav() {
         <li><Link href="/services">{ t('services') }</Link></li>
         <li><Link href="/contact">{ t('contact') }</Link></li>
         <li>
-          <button className={styles.language} onClick={() => router.push({ pathname, query }, asPath, { locale: switchValue })}>
-            {languageLabels[switchValue]}
+          <button className={styles.language} onClick={() => switchLocale()}>
+            {switchLabel}
           </button>
         </li>
       </ul>
