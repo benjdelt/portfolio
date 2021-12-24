@@ -1,9 +1,13 @@
 .section   {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.section h2 {
+  margin: 2em 0;
 }
 
 .bgColor {
@@ -16,7 +20,6 @@
 
 @media (max-width: 594px) {
   .section {
-    height: fit-content;
     padding: 2em 0;
   }
 }

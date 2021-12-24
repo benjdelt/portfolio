@@ -1,5 +1,14 @@
 .article {
   display: grid;
+  margin: 5em 0;
+}
+
+.imgLeft {
+  grid-template-areas:  "header header header"
+                        "img text text";
+}
+
+.imgRight {
   grid-template-areas:  "header header header"
                         "text text img";
 }
@@ -21,9 +30,17 @@
   grid-area: img;
 }
 
+.imgLeft img {
+  margin-right: 1em;
+}
+
+.imgRight img {
+  margin-left: 1em;
+}
+
+
 .article img {
   max-width: 30em;
-  margin: 0 1em;
   -webkit-box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.34); 
   box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.34);
 }

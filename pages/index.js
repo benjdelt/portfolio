@@ -35,6 +35,12 @@ export default function Home() {
           title="Talent Marketplace"
           text={ t('tmpText') }
         />
+        <Article 
+          image="/tmp.png"
+          title="Talent Marketplace"
+          text={ t('tmpText') }
+          leftSideImg
+        />
       </Section>
     </div>
   )
