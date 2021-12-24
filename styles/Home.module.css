@@ -1,7 +1,7 @@
 .header {
   background-color: #dfe4ea;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-left: 15vw;
   padding-top: 4em;
   height: 100vh;
