@@ -22,12 +22,12 @@ export default function Footer() {
             </Link>&nbsp;
           </li>
           <FontAwesomeIcon icon={faCircle} className={styles.separator} />&nbsp;
-          <li>
+          {/* <li>
             <Link href="/services">
               { t('services') }
             </Link>&nbsp;
           </li>
-          <FontAwesomeIcon icon={faCircle} className={styles.separator} />&nbsp;
+          <FontAwesomeIcon icon={faCircle} className={styles.separator} />&nbsp; */}
           <li>
             <Link href="/contact">
               { t('contact') }

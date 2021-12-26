@@ -47,7 +47,7 @@ function Nav() {
       </div>
       <ul className={`${styles.menu} ${isMobileOpenStyles}`} onClick={() => setMobileOpen(false)} ref={wrapperRef}>
         <li><Link href="/">{ t('presentation') }</Link></li>
-        <li><Link href="/services">{ t('services') }</Link></li>
+        {/* <li><Link href="/services">{ t('services') }</Link></li> */}
         <li><Link href="/contact">{ t('contact') }</Link></li>
         <li>
           <button className={styles.language} onClick={() => switchLocale()}>
