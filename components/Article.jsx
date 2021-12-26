@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from '../styles/Article.module.css';
 
 function Article({ image, title, text, leftSideImg }) {
@@ -9,7 +10,10 @@ function Article({ image, title, text, leftSideImg }) {
       <h4 className={styles.title}>{title}</h4>
       <p className={styles.text}>{text}</p>
       <div className={styles.img}>
-        <img src={image} alt={title} />
+        {/* <img src={image} alt={title}/> */}
+        {/* <Image src={image} alt={title} height={232} width={480} layout="fixed"/> */}
+        <Image src={image} alt={title} height={232} width={480} srcSet="2x"/>
+        {/* <Image src={image} alt={title} height={232} width={480} /> */}
       </div>
     </article>
   )

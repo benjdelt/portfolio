@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Section from '../components/Section';
@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       <header className={styles.header}>
         <div className={styles.headerImg}>
-          <img src="me.jpg" alt="Photo of Benjamin Deltenre"/>
+          <Image src="/site-header.jpg" alt="Photo of Benjamin Deltenre" height={240} width={240}/>
         </div>
         <div className={styles.headerText}>
           <h1>Benjamin Deltenre</h1>
