@@ -60,3 +60,9 @@ p, a, button {
 * {
   box-sizing: border-box;
 }
+
+@media (max-width: 425px) {
+  p, a, button {
+    font-size: 1rem;
+  }
+}
