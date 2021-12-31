@@ -55,9 +55,9 @@ export default function Home() {
               i18nKey="aboutText"
               t={t}
               components={[
-                <a href="https://www.talentmarketplace.ca/" target="_blank" rel="noopener noreferrer"/>,
-                <a href="https://www.linkedin.com/in/benjdelt/" target="_blank" rel="noopener noreferrer"/>,
-                <a href="mailto:benjdelt@gmail.com" target="_blank" rel="noopener noreferrer"/>,
+                <a href="https://www.talentmarketplace.ca/" target="_blank" rel="noopener noreferrer" key="tmp"/>,
+                <a href="https://www.linkedin.com/in/benjdelt/" target="_blank" rel="noopener noreferrer" key="linkedin"/>,
+                <a href="mailto:benjdelt@gmail.com" target="_blank" rel="noopener noreferrer" key="email"/>,
                 <LinkText href="/contact"/>
               ]}
             />
@@ -74,7 +74,7 @@ export default function Home() {
               i18nKey="tmpText"
               t={t}
               components={[
-                <a href="https://www.talentmarketplace.ca/" target="_blank" rel="noopener noreferrer"/>,
+                <a href="https://www.talentmarketplace.ca/" target="_blank" rel="noopener noreferrer" key="tmp"/>,
               ]}
             />
           }
