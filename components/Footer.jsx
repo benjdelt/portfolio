@@ -5,6 +5,7 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import { useLanguageSwitcher } from '../hooks/useLanguageSwitcher';
+import Social from '../components/Social';
 import styles from '../styles/Footer.module.css';
 
 export default function Footer() {
@@ -47,18 +48,21 @@ export default function Footer() {
             </button>
           </li>
         </ul>
-        <ul className={styles.social}>
-          <li>
-            <a href="https://github.com/benjdelt" target="_blank" rel="noopener noreferrer" title="Github">
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-          </li>
+        {/* <ul className={styles.social}>
           <li>
             <a href="https://linkedin.com/in/benjdelt" target="_blank" rel="noopener noreferrer" title="LinkedIn">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </li>
-        </ul>
+          <li>
+            <a href="https://github.com/benjdelt" target="_blank" rel="noopener noreferrer" title="Github">
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+          </li>
+        </ul> */}
+        <div className={styles.social}>
+          <Social />
+        </div>
       </footer>
   );
 }

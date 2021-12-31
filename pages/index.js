@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image';
-import Link from 'next/link';
 import { useTranslation, Trans } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
+import Social from '../components/Social';
 import Section from '../components/Section';
 import Article from '../components/Article';
 import LinkText from '../components/LinkText';
@@ -24,6 +27,24 @@ export default function Home() {
         <div className={styles.headerText}>
           <h1>Benjamin Deltenre</h1>
           <h3>{ t('headerTag') }</h3>
+          <Social />
+          {/* <ul>
+            <li>
+              <a href="mailto:benjdelt@gmail.com" target="_blank" rel="noopener noreferrer" title="email">
+                <FontAwesomeIcon icon={faEnvelope} />
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/benjdelt" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/benjdelt" target="_blank" rel="noopener noreferrer" title="Github">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            </li>
+          </ul> */}
         </div>
       </header>
       <Section>

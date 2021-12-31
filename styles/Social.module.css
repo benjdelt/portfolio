@@ -1,0 +1,11 @@
+.social {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+
+.social * {
+  font-size: 1.5rem;
+  margin: 0 .25em;
+  padding: 0;
+}

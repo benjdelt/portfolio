@@ -45,6 +45,16 @@
   align-self: flex-start;
 }
 
+@media (max-width: 880px) {
+  .headerImg {
+    margin: 0 1em;
+  }
+
+  .headerText {
+    text-align: center;
+  }
+}
+
 @media (max-width: 594px) {
   .header {
     flex-direction: column;
