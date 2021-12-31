@@ -58,7 +58,7 @@ export default function Home() {
                 <a href="https://www.talentmarketplace.ca/" target="_blank" rel="noopener noreferrer" key="tmp"/>,
                 <a href="https://www.linkedin.com/in/benjdelt/" target="_blank" rel="noopener noreferrer" key="linkedin"/>,
                 <a href="mailto:benjdelt@gmail.com" target="_blank" rel="noopener noreferrer" key="email"/>,
-                <LinkText href="/contact"/>
+                <LinkText href="/contact" key="contact"/>
               ]}
             />
           </p>
