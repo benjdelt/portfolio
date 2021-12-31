@@ -1,9 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image';
-import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
+import { useTranslation, Trans } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import Section from '../components/Section';
 import Article from '../components/Article';
+import LinkText from '../components/LinkText';
+
 import styles from '../styles/Home.module.css';
 
 
@@ -25,7 +29,18 @@ export default function Home() {
       <Section>
         <h2>{ t('aboutHeader') }</h2>
         <div className={styles.about}>
-          <p>{ t('aboutText') }</p>
+          <p>
+            <Trans
+              i18nKey="aboutText"
+              t={t}
+              components={[
+                <a href="https://www.talentmarketplace.ca/" target="_blank" rel="noopener noreferrer"/>,
+                <a href="https://www.linkedin.com/in/benjdelt/" target="_blank" rel="noopener noreferrer"/>,
+                <a href="mailto:benjdelt@gmail.com" target="_blank" rel="noopener noreferrer"/>,
+                <LinkText href="/contact"/>
+              ]}
+            />
+          </p>
         </div>
       </Section>
       <Section background>
@@ -33,7 +48,15 @@ export default function Home() {
         <Article 
           image="/tmp.png"
           title="Talent Marketplace"
-          text={ t('tmpText') }
+          text={
+            <Trans
+              i18nKey="tmpText"
+              t={t}
+              components={[
+                <a href="https://www.talentmarketplace.ca/" target="_blank" rel="noopener noreferrer"/>,
+              ]}
+            />
+          }
         />
         {/* <Article 
           image="/tmp.png"

@@ -54,7 +54,7 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="https://linkedin.com/in/benjdelt" target="_blank" rel="noopener noreferrer" title="Github">
+            <a href="https://linkedin.com/in/benjdelt" target="_blank" rel="noopener noreferrer" title="LinkedIn">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </li>
