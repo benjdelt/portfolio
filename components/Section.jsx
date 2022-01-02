@@ -1,4 +1,4 @@
-import styles from '../styles/Section.module.css';
+import styles from '../styles/components/Section.module.css';
 
 
 function Section({ children, background }) {

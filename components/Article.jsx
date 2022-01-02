@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from '../styles/Article.module.css';
+import styles from '../styles/components/Article.module.css';
 
 function Article({ image, title, text, leftSideImg }) {
 

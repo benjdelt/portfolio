@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import { useLanguageSwitcher } from '../hooks/useLanguageSwitcher';
-import styles from '../styles/Nav.module.css';
+import styles from '../styles/components/Nav.module.css';
 
 function Nav() {
 

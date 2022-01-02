@@ -2,11 +2,10 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import { useLanguageSwitcher } from '../hooks/useLanguageSwitcher';
 import Social from '../components/Social';
-import styles from '../styles/Footer.module.css';
+import styles from '../styles/components/Footer.module.css';
 
 export default function Footer() {
 
