@@ -1,5 +1,6 @@
 .contact {
   max-width: 50em;
+  margin-top: 2em;
 }
 
 .contact div {
@@ -19,6 +20,15 @@
   padding: .5em;
 }
 
+.contact label span {
+  color: tomato;
+}
+
 .contact .submit {
   margin-top: 2em;
+}
+
+.contact .submit button {
+  width: 10em;
+  align-self: center;
 }
