@@ -5,7 +5,7 @@ export const getNameError = name => {
   if(!/[^0-9]+/.test(name)){
     return 'alphabeticalError';
   } 
-  if(!/^[a-zA-Z ,.'-]{2,30}$/.test(name)) {
+  if(!/^[a-zA-Z ,.'-éèêë]{2,30}$/.test(name)) {
     return 'nameLengthError';
   }
     return 'noError';
