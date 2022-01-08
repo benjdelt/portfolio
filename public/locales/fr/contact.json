@@ -4,5 +4,9 @@
   "email": "E-mail",
   "subject": "Sujet",
   "message": "Message",
-  "send": "Envoyer"
+  "send": "Envoyer",
+  "required": "Requis",
+  "alphabeticalError": "Veuillez utiliser des caractères alphabétiques",
+  "nameLengthError": "Le nom ne peut contenir qu'entre 2 et 30 caractères",
+  "emailFormatError": "Requiert le format: utilisateur@email.com"
 }
