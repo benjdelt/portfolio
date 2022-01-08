@@ -1,4 +1,8 @@
 {
   "contact": "Contact",
-  "soon": "Coming soon..."
+  "name": "Name",
+  "email": "Email",
+  "subject": "Subject",
+  "message": "Message",
+  "send": "Send"
 }

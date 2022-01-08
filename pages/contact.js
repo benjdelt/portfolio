@@ -7,10 +7,12 @@ export default function Contact() {
 
   const { t } = useTranslation('contact');
 
+  const labels = {name: t('name'), email: t('email'), subject: t('subject'), message: t('message'), send: t('send')};
+
   return (
     <Section background>
       <h1>{t('contact')}</h1>
-      <ContactForm />
+      <ContactForm labels={labels} />
     </Section>
   )
 }
