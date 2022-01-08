@@ -8,11 +8,12 @@ export default function Contact() {
   const { t } = useTranslation('contact');
 
   const labels = {name: t('name'), email: t('email'), subject: t('subject'), message: t('message'), send: t('send')};
+  const errors = {required: t('required'), alphabeticalError: t('alphabeticalError'), nameLengthError: t('nameLengthError'), emailFormatError: t('emailFormatError')};
 
   return (
     <Section background>
       <h1>{t('contact')}</h1>
-      <ContactForm labels={labels} />
+      <ContactForm labels={labels} errors={errors}/>
     </Section>
   )
 }
