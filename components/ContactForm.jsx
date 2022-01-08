@@ -20,8 +20,8 @@ function ContactForm({labels, errors}) {
   }, [errorFields])
 
   return (
-    <form action="POST" className={styles.contact}>
-      <input type="hidden" name="contact" value="contact" />
+    <form name="contact" method="POST" action="/?contacted=true"  data-netlify="true" className={styles.contact}>
+      <input type="hidden" name="contact" value="contact"/>
       <ControlledTextInput name="name" label={labels.name} required={true} getError={getNameError} errorFields={errorFields} setErrorFields={setErrorFields}/>
       <ControlledTextInput name="email" label={labels.email} required={true} getError={getEmailError} errorFields={errorFields} setErrorFields={setErrorFields}/>
       <ControlledTextInput name="subject" label={labels.subject} required={false}/>
