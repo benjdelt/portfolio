@@ -10,7 +10,7 @@ export function useLanguageSwitcher() {
 
   const switchValue = locale === 'en' ? 'fr' : 'en';
 
-  const routerPush = loc => router.push({ pathname, query }, asPath, { locale: loc });
+  const routerPush = loc => router.push({ pathname, query }, asPath, { locale: loc, scroll: false });
 
   return {
     switchFr: () => routerPush('fr'),
