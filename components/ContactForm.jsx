@@ -5,7 +5,7 @@ import { getNameError, getEmailError, getMessageError } from '../utils/formValid
 
 import styles from '../styles/components/ContactForm.module.css';
 
-function ContactForm({labels, errorMessages}) {
+function ContactForm({labels, errorMessages, locale}) {
 
   const [errorFields, setErrorFields] = useState({
     name: getNameError(''),
@@ -20,7 +20,7 @@ function ContactForm({labels, errorMessages}) {
   }, [errorFields])
 
   return (
-    <form name="contact" method="POST" action="/?success=true"  data-netlify="true" className={styles.contact}>
+    <form name="contact" method="POST" action={`/contact/?success=true&locale=${locale}`}  data-netlify="true" className={styles.contact}>
       <input type="hidden" name="form-name" value="contact"/>
       <ControlledTextInput name="name" label={labels.name} errorMessages={errorMessages} required={true} getError={getNameError} errorFields={errorFields} setErrorFields={setErrorFields}/>
       <ControlledTextInput name="email" label={labels.email} errorMessages={errorMessages} required={true} getError={getEmailError} errorFields={errorFields} setErrorFields={setErrorFields}/>
