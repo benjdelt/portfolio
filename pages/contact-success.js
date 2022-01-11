@@ -1,11 +1,8 @@
-import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Section from '../components/Section';
-import LinkText from '../components/LinkText';
-import ContactForm from '../components/ContactForm';
 
 export default function Contact() {
 
