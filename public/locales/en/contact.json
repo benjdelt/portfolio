@@ -8,5 +8,7 @@
   "required": "Required",
   "alphabeticalError": "Please use alphabetical characters",
   "nameLengthError": "Name must contain between 2 and 30 characters",
-  "emailFormatError": "Requires the format: user@email.com"
+  "emailFormatError": "Requires the format: user@email.com",
+  "messageSent": "Message sent. Thanks for reaching out!",
+  "backToMainPage": "Back to the Main page"
 }
