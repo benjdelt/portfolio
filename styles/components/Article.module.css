@@ -24,6 +24,7 @@
 .text {
   grid-area: text;
   margin: 0;
+  width: 85%;
 }
 
 .img {
@@ -38,11 +39,21 @@
   margin-right: 1em;
 }
 
+.logos {
+  display: block;
+}
 
-.article img {
-  /* max-width: 30em; */
-  -webkit-box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.34); 
-  box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.34);
+.logos svg:not(:first-child) {
+  margin-left: .5em;
+}
+
+.article .img {
+  align-self: center;
+}
+
+.article .img > span {
+  -webkit-box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.34) !important; 
+  box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.34) !important;  
 }
 
 @media (max-width: 1200px) {

@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Image from 'next/image';
 import { useTranslation, Trans } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -7,6 +6,9 @@ import Social from '../components/Social';
 import Section from '../components/Section';
 import Article from '../components/Article';
 import LinkText from '../components/LinkText';
+
+import ReactLogo from '../components/icons/ReactLogo';
+import DjangoLogo from '../components/icons/DjangoLogo';
 
 import styles from '../styles/pages/Home.module.css';
 
@@ -47,7 +49,7 @@ export default function Home() {
       <Section background>
         <h2>{ t('experienceHeader') }</h2>
         <Article 
-          image="/tmp.png"
+          image="/talentmarketplace320.png"
           title="Talent Marketplace"
           text={
             <Trans
@@ -58,6 +60,10 @@ export default function Home() {
               ]}
             />
           }
+          icons={[
+            <ReactLogo width={30} height={30} key="react"/>,
+            <DjangoLogo width={30} height={30} key="django"/>
+          ]}
         />
         {/* <Article 
           image="/tmp.png"
