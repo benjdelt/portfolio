@@ -1,9 +1,7 @@
 import Image from 'next/image';
-import ReactLogo from './icons/ReactLogo';
-import DjangoLogo from './icons/DjangoLogo';
 import styles from '../styles/components/Article.module.css';
 
-function Article({ image, title, text, leftSideImg, icons }) {
+function Article({ image, title, text, icons, leftSideImg }) {
 
   const sideImgClass = leftSideImg ? styles.imgLeft : styles.imgRight;
 
@@ -14,8 +12,6 @@ function Article({ image, title, text, leftSideImg, icons }) {
         {text}
         <span className={styles.logos}>
           {icons.map(icon => icon)}
-          {/* <ReactLogo width={30} height={30}/>
-          <DjangoLogo width={30} height={30}/> */}
         </span>
       </p>
       <div className={styles.img}>

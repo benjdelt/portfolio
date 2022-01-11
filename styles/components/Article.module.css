@@ -24,7 +24,7 @@
 .text {
   grid-area: text;
   margin: 0;
-  width: 85%;
+  /* width: 85%; */
 }
 
 .img {
@@ -32,11 +32,11 @@
 }
 
 .imgLeft p {
-  margin-left: 1em;
+  margin-left: 5em;
 }
 
 .imgRight p {
-  margin-right: 1em;
+  margin-right: 5em;
 }
 
 .logos {

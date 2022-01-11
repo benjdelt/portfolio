@@ -9,6 +9,7 @@ import LinkText from '../components/LinkText';
 
 import ReactLogo from '../components/icons/ReactLogo';
 import DjangoLogo from '../components/icons/DjangoLogo';
+import NextLogo from '../components/icons/NextLogo';
 
 import styles from '../styles/pages/Home.module.css';
 
@@ -65,12 +66,24 @@ export default function Home() {
             <DjangoLogo width={30} height={30} key="django"/>
           ]}
         />
-        {/* <Article 
-          image="/tmp.png"
-          title="Talent Marketplace"
-          text={ t('tmpText') }
+        <Article 
+          image="/portfolio320.png"
+          title="Portfolio"
+          text={ 
+            <Trans 
+              i18nKey="portfolioText"
+              t={t}
+              components={[
+                <a href="https://github.com/benjdelt/portfolio/" target="_blank" rel="noopener noreferrer" key="portfolio"/>,
+              ]}
+            />  
+          }
+          icons={[
+            <NextLogo width={30} height={30} key="nextjs"/>,
+            <ReactLogo width={30} height={30} key="react"/>
+          ]}
           leftSideImg
-        /> */}
+        />
       </Section>
     </div>
   )
