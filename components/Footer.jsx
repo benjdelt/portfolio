@@ -62,6 +62,7 @@ export default function Footer() {
         <div className={styles.social}>
           <Social />
         </div>
+        <p>TVA BE 0779 744 990</p>
       </footer>
   );
 }
